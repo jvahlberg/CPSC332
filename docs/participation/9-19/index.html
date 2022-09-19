@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Participation 9-19 (fake form)</title>
+</head>
+
+<body>
+    <h1>It is a Monday type of web page</h1>
+    <form action="submission.html">
+        <!-- NAME ATT. IS THE MOST IMPORTANT -->
+        <!-- First Name -->
+        <p>
+            <label for="first">First Name</label>
+            <input type="text" id="first" name="first" placeholder="First Name Only">
+        </p>
+        <!-- Last Name -->
+        <p>
+            <label for="last">Last Name</label>
+            <input type="text" name="last" id="last" placeholder="Last Name Only">
+        </p>
+        <p>
+            <label for="area">Text Area for Gibberish</label>
+            <br>
+            <textarea name="area" id="area" rows="10" placeholder="Multiline text"></textarea>
+        </p>
+        <p>
+            <label for="check">Check for spam emails</label>
+            <input type="checkbox" name="check">
+        </p>
+        <p>
+            <input type="button" value="This button does nothing">
+        </p>
+        <p>
+        <fieldset>
+            <legend>Best Movie/TV Franchise</legend>
+
+            <input type="radio" name="movie" value="Marvel" id="Marvel">
+            <label for="Marvel">Marvel</label>
+
+            <input type="radio" name="movie" value="DC" id="DC">
+            <label for="DC">DC</label>
+
+            <input type="radio" name="movie" value="GameofThrones" id="GoT">
+            <label for="GoT">Game of Thrones</label>
+
+            <input type="radio" name="movie" value="Other" id="other">
+            <label for="other">Other</label>
+        </fieldset>
+        </p>
+        <input type="submit" value="Submit Form">
+    </form>
+</body>
+
+</html>
