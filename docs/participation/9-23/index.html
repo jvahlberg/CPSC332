@@ -11,7 +11,7 @@
 
     <style>
         h1 {
-            background-color: rgba(139, 0, 0, 0.645);
+            /* background-color: rgba(139, 0, 0, 0.645); */
         }
     </style>
 
@@ -19,7 +19,11 @@
 
 <body>
     <!-- Cascading Style Sheets -->
-    <h1>CSS Basics</h1>
+    <h1 id="main-header">CSS Basics</h1>
+    <!-- override -->
+    <p style="background-color:white">
+        (this is an ugly webpage)
+    </p>
     <h1 style="background-color: aqua;"> another heading</h1>
     <ul>
         <li>
@@ -32,6 +36,9 @@
     <table>
 
     </table>
+
+    <h2 class="sub-header">L2 Header</h2>
+    <h3 class="sub-header" style="background-color:burlywood">L3 Header</h3>
 </body>
 
 </html>

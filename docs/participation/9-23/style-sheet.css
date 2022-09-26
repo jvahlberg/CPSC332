@@ -1,7 +1,21 @@
 li {
-    background-color: blueviolet;
+    background-color: gold;
 }
 
 p {
     background-color: aquamarine;
+}
+
+#main-header,
+li {
+    color: mediumblue;
+}
+
+.sub-header {
+    color: crimson;
+}
+
+
+#main-header:hover {
+    color: white;
 }
