@@ -16,13 +16,14 @@
         div {}
 
         #fake-button {
+            font-size: xx-large;
             /*
                 offset-x - Horizontal pixel offset of shadow
                 offset-y - Vertical pixel offset of shadow
                 blur-radius - Optional shadow blur (default is 0)
                 color - Optional shadow color (default is usually the current CSS color)
             */
-
+            text-shadow: 1px 1px 2px red;
             /*
                 inset - Optional value that draws the shadow inside the box (default is outside the box)
                 offset-x - Horizontal pixel offset of shadow
@@ -31,6 +32,7 @@
                 spread-radius - Positive value causes shadow to grow, negative values to shrink (default is 0)
                 color - Optional shadow color (default is usually the current CSS color)
             */
+            box-shadow: 10px 5px 5px blue;
 
             /* border-radius
                 Single value - All four corners are equally rounded
@@ -41,7 +43,7 @@
                 Four values - First value is top-left, second is top-right, third is bottom-right, forth 
                     is bottom-left
             */
-
+            border-radius: 10px 10px;
             /* border-image
                 renders an element's border using sections of an image
             */
@@ -49,11 +51,13 @@
             /* linear-gradient 
                 creates a linear gradient that transitions from color1 to color2 when moving from the top
                 edge to the bottom edge.*/
-
+            background: linear-gradient(to bottom, green, white);
             /* Animation:
                 needs a name to match with the keyframe rules
                 add additional properties/values to activate
             */
+            animation-name: changeSize;
+            animation-duration: 2s;
 
         }
 
@@ -63,13 +67,21 @@
         rotate(angle)	Rotates clockwise by angle	
         */
 
-        #fake-button:hover {}
+        #fake-button:hover {
+            color: white;
+        }
 
-        #fake-button:active {}
+        #fake-button:active {
+            transform: scale(0.75);
+        }
 
         @keyframes changeColors {}
 
-        @keyframes changeSize {}
+        @keyframes changeSize {
+            0% {
+                transform: scale(1);
+            }
+        }
     </style>
 </head>
 
