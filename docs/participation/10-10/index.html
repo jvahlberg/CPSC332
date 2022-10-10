@@ -1,12 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>10/10 participation</title>
+    <script>
+        window.onload = function () {
+
+            // arrow function
+            hello = () => "Hello World";
+            console.log(hello());
+
+            // loops
+            var myArray = [1, 2, 3, 4];
+            console.log("normal for");
+            for (let i = 0; i < myArray.length; i++) {
+                console.log(myArray[i]);
+            };
+            console.log("different for");
+            for (const myVal of myArray) {
+                console.log(myVal);
+            };
+            console.log("foreach");
+            myArray.forEach(function (item, i) {
+                console.log(item + " " + i)
+            });
+
+            //making objects
+            var myObject = {
+                name: "defaultName",
+                aNum: 96,
+                anArray: [1, 2, 3, 4, 5],
+
+                // object method
+                echo: function (value) {
+                    console.log(value);
+                },
+                // getter
+                get numberPlusOne() {
+                    return this.aNum + 1;
+                }
+            };
+            console.log(myObject.name);
+            myObject.echo("banana");
+            console.log(myObject.numberPlusOne);
+
+            // date time
+            let dateTimeNow = new Date();
+            console.log(dateTimeNow);
+
+            // try catch block
+            try {
+                myObject.numberPlusOne();
+            } catch (error) {
+                console.log(error);
+            }
+            console.log("program still going")
+
+            //button stuff
+            var currentDate = {
+                dateTime: null,
+
+            }
+
+            document.getElementById("update-date").addEventListener("click", pizzaTime);
+            function pizzaTime() {
+                console.log("Is it Pizza Time?");
+            };
+        }
+    </script>
 </head>
+
 <body>
-    
+    <h1>More JS</h1>
+    <div>
+        <p>
+            <span id="date-text">
+                Click the button...
+            </span>
+        </p>
+        <p>
+            <button id="update-date">
+                Click for current date time
+            </button>
+        </p>
+    </div>
+    <div>
+        <h3>Have a meme!</h3>
+        <div>
+            <img src="IMG_3925.PNG" alt="Meme">
+        </div>
+        <br>
+        <a href="../../">Back to main index</a>
+    </div>
 </body>
+
 </html>
