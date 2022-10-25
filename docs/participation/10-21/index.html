@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #main {
+            padding: 10px;
+            border: 20px solid darkgreen;
+            border-style: outset;
+            border-radius: 5px;
+            margin: 10px;
+        }
+
+        #legend {
+            border: 5px solid black;
+            border-radius: 5px;
+        }
+
+        #main-form {
+            padding: 10px;
+            margin: 10px;
+        }
+
+        #input-table {
+            border-spacing: 5px;
+        }
+    </style>
+    <script>
+        function checkForm(event) {
+            
+        }
+
+        let form = document.getElementById("main-form");
+        form.addEventListener("submit", checkForm);
+    </script>
+</head>
+
+<body>
+    <fieldset id="main">
+        <legend id="legend">CPSC 332 10/21 Participation</legend>
+        <form action="submission.html" method="get" id="main-form">
+            <table id="input-table">
+                <tr>
+                    <td>
+                        <label for="input1">Your Name:</label>
+                    </td>
+                    <td>
+                        <input type="text" name="name" placeholder="King Arthur">
+                    </td>
+                    <td>
+                        <button id="save-name">Save Answer</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="input2">Your Quest:</label>
+                    </td>
+                    <td>
+                        <input type="text" name="quest" placeholder="To seek the Holy Grail">
+                    </td>
+                    <td>
+                        <button id="save-quest">Save Answer</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="input3">Favorite Color:</label>
+                    </td>
+                    <td>
+                        <input type="text" name="color" placeholder="Blue">
+                    </td>
+                    <td>
+                        <button id="save-color">Save Answer</button>
+                    </td>
+                </tr>
+            </table>
+            <input type="submit" value="Submit Response">
+        </form>
+    </fieldset>
+    <div>
+        <a href="../../"><button>Back to Index</button></a>
+    </div>
+</body>
+
+</html>
