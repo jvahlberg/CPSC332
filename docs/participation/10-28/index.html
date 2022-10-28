@@ -18,6 +18,11 @@
             integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
             crossorigin="anonymous"
         ></script>
+        <script
+            src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"
+            integrity="sha256-lSjKY0/srUM9BE3dPm+c4fBo1dky2v27Gdjm2uoZaL0="
+            crossorigin="anonymous"
+        ></script>
 
         <script>
             //#2
@@ -25,7 +30,7 @@
             $(document).ready(function () {
                 //#3 create a JQuery object by passing the JQuery function a selected DOM node
                 var $container = jQuery(document.getElementById("container"));
-                
+
                 //#4 we can use a "shorthand" version of this with $()!
                 var $container2 = $("#container");
 
@@ -33,11 +38,13 @@
                 //we can select DOM elements (as seen in #4)
                 //NOTE: need to include the type prefix!, e.g., . or # for class or id
                 $("ol").addClass("ordered-list");
-                $(".ordered-list").append($("<li>").text("JQuery Introduction"));
+                $(".ordered-list").append(
+                    $("<li>").text("JQuery Introduction")
+                );
                 $(".ordered-list").append($("<li>").text("siht f"));
                 //there are other selectors, this one finds all that contain matching word
                 var $filteredContent = $("li:contains('JQuery')");
-                
+
                 //#6 Events -- handled similar to standard JS but more concise!
                 //let's add a button with JQuery. it's content (label) and an id!
                 // $("#container").on("click", callbackFunction);
@@ -46,7 +53,9 @@
                 // document.getElementById("container").addEventListener("click", callbackFunction);
 
                 function callbackFunction() {
-                    console.log("Div clicked: (HTML content JS: " + this.innerHTML + ")")
+                    console.log(
+                        "Div clicked: (HTML content JS: " + this.innerHTML + ")"
+                    );
                     // console.log("Div clicked: (HTML content JS: " + $(this).html() + ")")
                 }
 
@@ -67,10 +76,10 @@
                 // }
 
                 //JQuery Method
-                $("h1").dblclick(function() {
+                $("h1").dblclick(function () {
                     console.log("dbl click h1");
-                    $("body"). append($("<h2>").text("New h2"));
-                })
+                    $("body").append($("<h2>").text("New h2"));
+                });
                 //#7. Styles!
                 //method 1: property-value pair
                 $("div").css("border", "2px double purple");
@@ -80,12 +89,16 @@
                     borderRadius: "20px",
                     "margin-top": "10px",
                     marginBottom: "5px",
-                    backgroundColor: "rgb(235, 102, 126)"
-                })
+                    backgroundColor: "rgb(235, 102, 126)",
+                });
                 //Activity (Using JQuery):
                 //1. Center the button created in this lecture using the property-value pair CSS method 1 demonstrated during lecture.
                 //2. Apply a background color, border, padding, and margin (your choice) to the ordered list using the object literal method demonstrated during lecture
                 //3. Add an event listener to the ordered list list items so the color changes as you hover over each individual list item (color is your choice).
+
+                $("div").attr("class", "draggable ui-widget-content")
+
+                
             }); //end of ready function
         </script>
     </head>
