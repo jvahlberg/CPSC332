@@ -33,29 +33,55 @@
                 //we can select DOM elements (as seen in #4)
                 //NOTE: need to include the type prefix!, e.g., . or # for class or id
                 $("ol").addClass("ordered-list");
-                $(".ordered-list").append("<li>JQuery Introduction</li>");
-                $(".ordered-list").append("<li>").text("siht f");
+                $(".ordered-list").append($("<li>").text("JQuery Introduction"));
+                $(".ordered-list").append($("<li>").text("siht f"));
                 //there are other selectors, this one finds all that contain matching word
                 var $filteredContent = $("li:contains('JQuery')");
                 
                 //#6 Events -- handled similar to standard JS but more concise!
                 //let's add a button with JQuery. it's content (label) and an id!
-                $("#container").click(() => {
-                    alert("clicked");
-                });
-                $("#container").on("click", callbackFunction);
+                // $("#container").on("click", callbackFunction);
+                // $("#container").on("click", callbackFunction);
+
+                // document.getElementById("container").addEventListener("click", callbackFunction);
 
                 function callbackFunction() {
-                    alert("another")
+                    console.log("Div clicked: (HTML content JS: " + this.innerHTML + ")")
+                    // console.log("Div clicked: (HTML content JS: " + $(this).html() + ")")
                 }
+
                 //now let's add an event handler for when we click it
                 //we need a callback function!
                 //let's try a different event
                 //JavaScript Method
+
+                let headers = document.getElementsByTagName("h1");
+
+                // headers.addEventListener("doubleclick", callbackFunction);
+
+                // for (const element of headers) {
+                //     element.addEventListener("dblclick", function(){
+                //         // console.log("dbl click h1 elem");
+                //         // $("body").append($("<h2>").)
+                //     })
+                // }
+
                 //JQuery Method
+                $("h1").dblclick(function() {
+                    console.log("dbl click h1");
+                    $("body"). append($("<h2>").text("New h2"));
+                })
                 //#7. Styles!
                 //method 1: property-value pair
+                $("div").css("border", "2px double purple");
                 //method 2: object literal
+                $("div").css({
+                    padding: "10px",
+                    borderRadius: "20px",
+                    "margin-top": "10px",
+                    marginBottom: "5px",
+                    backgroundColor: "rgb(235, 102, 126)"
+                })
                 //Activity (Using JQuery):
                 //1. Center the button created in this lecture using the property-value pair CSS method 1 demonstrated during lecture.
                 //2. Apply a background color, border, padding, and margin (your choice) to the ordered list using the object literal method demonstrated during lecture
@@ -69,6 +95,7 @@
             <h1>9. JQuery</h1>
             <ol></ol>
         </div>
+        <h1>Another header</h1>
         <a href="../../"><button>Back to Index</button></a>
     </body>
 </html>
